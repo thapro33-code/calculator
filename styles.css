@@ -1,0 +1,100 @@
+body {
+    display: flex;
+    flex-direction: column; /* Stack button and calculator vertically */
+    align-items: center;
+    justify-content: center; /* Center the calculator vertically */
+    height: 100vh;
+    margin: 0;
+    background-color: #ffffff; /* Default white background */
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+#toggle-bg {
+    width: 100%;
+    padding: 10px;
+    background-color: #1976d2; /* Blue button */
+    color: #ffffff;
+    border: none;
+    border-bottom: 2px solid #0d47a1; /* Blue border at the bottom */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    position: absolute; /* Make sure it stays at the top */
+    top: 0;
+    left: 0;
+}
+
+#toggle-bg:hover {
+    background-color: #1565c0; /* Darker blue on hover */
+}
+
+.calculator {
+    background-color: #1976d2; /* Blue background for calculator */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 60px; /* Space below the button */
+}
+
+#display {
+    width: 100%;
+    height: 40px;
+    text-align: right;
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid #0d47a1; /* Darker blue for border */
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #0d47a1; /* Darker blue for background */
+    color: #ffffff;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #64b5f6; /* Light blue for buttons */
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #42a5f5; /* Slightly darker blue on hover */
+}
+
+button:active {
+    background-color: #2196f3; /* Even darker blue on active */
+}
+
+.equals {
+    background-color: #4caf50; /* Green for = button */
+    color: white;
+    grid-column: span 2;
+}
+
+.equals:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}
+
+.zero {
+    grid-column: span 1;
+}
+
+.dot {
+    grid-column: span 1;
+}
+
+.percent {
+    grid-column: span 1;
+}
